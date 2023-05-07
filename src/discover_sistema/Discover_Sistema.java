@@ -4,6 +4,7 @@
  */
 package discover_sistema;
 
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -17,6 +18,12 @@ public class Discover_Sistema {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        ArrayList<Personas> personas = new ArrayList();
+        ArrayList<Transportes> transportes = new ArrayList();
+        ArrayList Clases = new ArrayList();
+        
+        
+        
         int opcion = -1;
         
          while (opcion != 0) {
@@ -30,7 +37,7 @@ public class Discover_Sistema {
              
          }else if(opcion == 1){
              
-             
+         
              
          }else if (opcion == 3){
              
@@ -49,9 +56,14 @@ public class Discover_Sistema {
              
              
          }else if (opcion == 7){
-             
-             
-             
+         //Comienzo While
+         int opcion2 = -1;
+         
+         while (opcion2 != 0) {
+                  opcion2 = Integer.parseInt(JOptionPane.showInputDialog("Discovery System \n0-Salir\n1-Subir Alumnos Transporte\n2-Bajar Alumnos Transporte\n3-Listar Alumnos del Transporte\n4-Escoger Transportista\n5-Quitar Transporte\n6-Añadir Ruta\n7-Quitar Ruta\n8-Imprimir Transporte\n9-Comenzar"));
+         }
+         
+         //Fin While    
          }else if (opcion == 8){
              
              

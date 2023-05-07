@@ -4,7 +4,9 @@
  */
 package discover_sistema;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  *
@@ -12,7 +14,7 @@ import java.util.Date;
  */
 public class Alumnos extends Personas{
     private String idenEstudiante;
-    private String listClas;
+    private List<String> listClas;
     
     
     public Alumnos(){
@@ -22,7 +24,7 @@ public class Alumnos extends Personas{
     public Alumnos(String idenEstudiante, String listClas, String identidad, String nombre, Date fechanac) {
         super(identidad, nombre, fechanac);
         this.idenEstudiante = idenEstudiante;
-        this.listClas = listClas;
+        this.listClas = new ArrayList<>();
     }
 
     public String getIdenEstudiante() {
@@ -33,14 +35,14 @@ public class Alumnos extends Personas{
         this.idenEstudiante = idenEstudiante;
     }
 
-    public String getListClas() {
+    public List<String> getListClas() {
         return listClas;
     }
 
-    public void setListClas(String listClas) {
+    public void setListClas(List<String> listClas) {
         this.listClas = listClas;
     }
-    
+
     
     
     
