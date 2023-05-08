@@ -26,6 +26,7 @@ public class Discover_Sistema {
         ArrayList<Personas> personas = new ArrayList();
         ArrayList<Transportes> transportes = new ArrayList();
         ArrayList Clases = new ArrayList();
+        ArrayList Estaciones = new ArrayList();
 
         int opcion = -1;
 
@@ -46,7 +47,11 @@ public class Discover_Sistema {
 
             } else if (opcion == 2) {
                 
-                
+                Estaciones E = new Estaciones(JOptionPane.showInputDialog("Ingrese el Nombre de la Estacion"),
+                        Integer.parseInt(JOptionPane.showInputDialog("Ingrese el Numero de la Cordenada X")),
+                        Integer.parseInt(JOptionPane.showInputDialog("Ingrese el Numero de la Cordenada Y")));
+
+                Estaciones.add(E);
 
             } else if (opcion == 3) {
 
@@ -242,6 +247,17 @@ public class Discover_Sistema {
                 JOptionPane.showMessageDialog(null, mensaje);
 
             } else if (opcion == 9) {
+                
+                String mensaje = "Lista de Rutas:\n";
+
+                 for (Object t : Estaciones) {
+               
+                     mensaje += t + "\n";
+               
+                }
+               
+                JOptionPane.showMessageDialog(null, mensaje);
+                
 
             } else if (opcion == 10) {
                 String mensaje = "Lista de Alumnos:\n";

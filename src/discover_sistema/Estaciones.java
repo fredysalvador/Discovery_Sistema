@@ -46,6 +46,11 @@ public class Estaciones {
     public void setCoordenady(int Coordenady) {
         this.Coordenady = Coordenady;
     }
+
+    @Override
+    public String toString() {
+        return "Estaciones{" + "Nombre=" + Nombre + ", Coordenadx=" + Coordenadx + ", Coordenady=" + Coordenady + '}';
+    }
     
     
 
