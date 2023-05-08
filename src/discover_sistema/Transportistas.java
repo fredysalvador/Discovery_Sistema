@@ -41,6 +41,17 @@ public class Transportistas extends Personas{
     public void setApodo(String Apodo) {
         this.Apodo = Apodo;
     }
+
+    @Override
+    public String toString() {
+        return "Personas{" + "identidad=" + identidad + ", nombre=" + nombre + ", fechanac=" + fechanac + "yearexperiencia=" + yearexperiencia + ", Apodo=" + Apodo + '}';
+    }
+
+    
+    //@Override
+    //public String toString() {
+      //  return "Transportistas{" + "yearexperiencia=" + yearexperiencia + ", Apodo=" + Apodo + '}';
+    //}
     
     
     

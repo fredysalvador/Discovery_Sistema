@@ -51,7 +51,7 @@ public class Alumnos extends Personas{
 */
        @Override
     public String toString() {
-        return "Personas{" + "identidad=" + identidad + ", nombre=" + nombre + ", fechanac=" + fechanac + "idenEstudiante=" + idenEstudiante + ", listClas=" + listClas;
+        return "Personas{" + "identidad=" + identidad + ", nombre=" + nombre + ", fechanac=" + fechanac + "idenEstudiante=" + idenEstudiante + ", listClas=" + listClas + '}';
                                       //", "idenEstudiante=" + idenEstudiante + ", listClas=" + listClas +
     }
 }

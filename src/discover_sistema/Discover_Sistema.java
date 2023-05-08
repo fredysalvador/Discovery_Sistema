@@ -47,11 +47,10 @@ public class Discover_Sistema {
             } else if (opcion == 3) {
 
                 Date Fecha_Seteada = null;
-
                 String Codigo_Estudiante = JOptionPane.showInputDialog("Ingrese la el Numero de Codigo del Estudiante");
                 String Identidad_Estudiante = JOptionPane.showInputDialog("Ingrese el Numero de Identidad del Estudiante");
                 String Nombre_Estudiante = JOptionPane.showInputDialog("Ingrese el Nombre del Estudiante");
-                String Fecha_Nacimiento = JOptionPane.showInputDialog("Ingrese la Fecha de Nacimiento");
+                String Fecha_Nacimiento = JOptionPane.showInputDialog("Ingrese la Fecha de Nacimiento\n Formato:DD/MM/YYYY");
 
                 try {
                     // Creamos una instancia del formato de fecha deseado
@@ -71,22 +70,34 @@ public class Discover_Sistema {
                 }
 
             } else if (opcion == 4) {
-                
+                int i = 0;
+                ///Muestra Datos del Estudiante
+                String mensaje = "Lista de Alumnos:\n";
 
-                
-             // String Nombre_Clase = JOptionPane.showInputDialog("Ingrese el Nombre de la Clase");
+                for (Personas t : personas) {
+                    if (t instanceof Alumnos) {
+                        Alumnos alm = (Alumnos) t;
+                        mensaje += "Posicion-" + i + " - " + alm + "\n";
+                        
+                    }
+                    i++;
+                }
 
+                JOptionPane.showMessageDialog(null, mensaje);
+
+                //Fin Datos Estudiantes
+                // String Nombre_Clase = JOptionPane.showInputDialog("Ingrese el Nombre de la Clase");
             } else if (opcion == 5) {
 
-                 Date Fecha_Seteada = null;
+                Date Fecha_Seteada = null;
 
-                String An_Experiencia = JOptionPane.showInputDialog("Ingrese cuantos Años de Experiencia Tiene");
+                Double An_Experiencia = Double.valueOf(JOptionPane.showInputDialog("Ingrese cuantos Años de Experiencia Tiene"));
                 String Identidad_Transportista = JOptionPane.showInputDialog("Ingrese el Numero de Identidad del Transportista");
                 String Nombre_Transportista = JOptionPane.showInputDialog("Ingrese el Nombre del Transportista");
                 String Apod_Transportista = JOptionPane.showInputDialog("Ingrese el Apodo del Transportista");
-                String Fecha_Transportista = JOptionPane.showInputDialog("Ingrese la Fecha de Nacimiento");
+                String Fecha_Nacimiento = JOptionPane.showInputDialog("Ingrese la Fecha de Nacimiento");
 
-               /* try {
+                try {
                     // Creamos una instancia del formato de fecha deseado
                     SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
 
@@ -95,15 +106,14 @@ public class Discover_Sistema {
 
                     // Hacemos algo con la fecha...
                     //   System.out.println("La fecha de nacimiento es: " + Fecha_Seteada);
-                    Alumnos a = new Alumnos(Codigo_Estudiante, null, Identidad_Estudiante, Nombre_Estudiante, Fecha_Seteada);
+                    Transportistas t = new Transportistas(An_Experiencia, Apod_Transportista, Identidad_Transportista, Nombre_Transportista, Fecha_Seteada);
 
-                    personas.add(a);
+                    personas.add(t);
 
                 } catch (ParseException ex) {
                     JOptionPane.showMessageDialog(null, "Error al ingresar la fecha de nacimiento");
                 }
-                */
-                
+
             } else if (opcion == 6) {
 
             } else if (opcion == 7) {
@@ -115,14 +125,14 @@ public class Discover_Sistema {
 
                 //Fin While    
             } else if (opcion == 8) {
-              
-              String mensaje = "Lista de Clases:\n";
 
-             for (Object clase : Clases) {
-            // System.out.println(clase);
-              mensaje += clase + "\n";
-             }
-             JOptionPane.showMessageDialog(null, mensaje);
+                String mensaje = "Lista de Clases:\n";
+
+                for (Object clase : Clases) {
+                    // System.out.println(clase);
+                    mensaje += clase + "\n";
+                }
+                JOptionPane.showMessageDialog(null, mensaje);
 
             } else if (opcion == 9) {
 
@@ -130,13 +140,25 @@ public class Discover_Sistema {
                 String mensaje = "Lista de Alumnos:\n";
 
                 for (Personas t : personas) {
-                    //System.out.println(t);
-                    mensaje += t + "\n";
-                    //JOptionPane.showMessageDialog(null,"Lista de Alumnos"+(t));
+                    if (t instanceof Alumnos) {
+                        Alumnos alm = (Alumnos) t;
+                        mensaje += alm + "\n";
+                    }
                 }
                 JOptionPane.showMessageDialog(null, mensaje);
 
             } else if (opcion == 11) {
+
+                String mensaje = "Lista de Transportistas:\n";
+
+                for (Personas t : personas) {
+                    if (t instanceof Transportistas) {
+                        Transportistas tra = (Transportistas) t;
+                        mensaje += tra + "\n";
+                    }
+                }
+
+                JOptionPane.showMessageDialog(null, mensaje);
 
             } else if (opcion == 12) {
 
@@ -147,3 +169,12 @@ public class Discover_Sistema {
     }
 
 }
+//Codigos los cuales me sirvieron de formato
+/* 
+
+                 /* for (Personas t : personas) {
+                    //System.out.println(t);
+                    mensaje += t + "\n";
+                    //JOptionPane.showMessageDialog(null,"Lista de Alumnos"+(t));
+                }
+ */
