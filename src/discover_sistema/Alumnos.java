@@ -39,11 +39,19 @@ public class Alumnos extends Personas{
         return listClas;
     }
 
-    public void setListClas(List<String> listClas) {
-        this.listClas = listClas;
+    public void setListClas(String listCla) {
+        listClas.add(listCla);
     }
 
-    
-    
-    
+/*    @Override
+    public String toString() {
+        return "Alumnos{" + "idenEstudiante=" + idenEstudiante + ", listClas=" + listClas + '}';
+        
+    }
+*/
+       @Override
+    public String toString() {
+        return "Personas{" + "identidad=" + identidad + ", nombre=" + nombre + ", fechanac=" + fechanac + "idenEstudiante=" + idenEstudiante + ", listClas=" + listClas;
+                                      //", "idenEstudiante=" + idenEstudiante + ", listClas=" + listClas +
+    }
 }

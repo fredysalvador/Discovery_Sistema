@@ -13,9 +13,9 @@ import java.util.Date;
  * @author Fredy Salvador
  */
 public class Personas {
-    private String identidad;
-    private String nombre;
-    private Date fechanac;
+    public String identidad;
+    public String nombre;
+    public Date fechanac;
     
     public Personas(){
     
@@ -50,7 +50,6 @@ public class Personas {
     public void setFechanac(Date fechanac) {
         this.fechanac = fechanac;
     }
-    
     
     
 }

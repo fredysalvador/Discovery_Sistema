@@ -14,7 +14,7 @@ public class Transportes {
     private Color Color;
     private String Transportista;
     private String Estacion;
-    
+   //Recordar ponerlas publicas 
     public Transportes(){
     
     }
