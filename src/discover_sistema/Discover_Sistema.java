@@ -83,10 +83,47 @@ public class Discover_Sistema {
                     i++;
                 }
 
-                JOptionPane.showMessageDialog(null, mensaje);
+               int PosAlumn = Integer.parseInt(JOptionPane.showInputDialog(null, "Seleccione la posicion del alumno a agregar clase\n"+mensaje));
+               
+               ////Separación de codigos
+               
+                
+               int f = 0;
+               
+               String mensaje2 = "Lista de Clases:\n";
 
-                //Fin Datos Estudiantes
-                // String Nombre_Clase = JOptionPane.showInputDialog("Ingrese el Nombre de la Clase");
+                for (Object clase : Clases) {
+                    // System.out.println(clase);
+                    mensaje2 += "Posicion-" + f + " - " + clase + "\n";
+                    
+                    f++;
+                }
+                 String PosClas = JOptionPane.showInputDialog(null, "Seleccione la Posiccion de la Clase a Agregar\n"+mensaje2);
+                
+                 
+                         
+                          
+                 //String Clasename;
+                 /*         for(Object clase : Clases){
+                      
+                       Clases.get(PosClas).;
+                 }
+                 */
+   
+                 //String nombreClase = Clases.get(PosClas).getNombreClas();
+                  
+
+                   //Falta Agregar la seccion de traer el valor del listado de clases
+
+                 if (PosAlumn >= 0 && PosAlumn < personas.size()) {
+                    if (personas.get(PosAlumn) instanceof Alumnos){
+                        ((Alumnos) personas.get(PosAlumn)).setListClas(PosClas);
+                    }
+                 } else {
+                    JOptionPane.showMessageDialog(null, "No se ingreso ningun dato ya que la posicion ingresada no existe!!!");
+                 }
+                 //Fin Datos Estudiantes
+                 // String Nombre_Clase = JOptionPane.showInputDialog("Ingrese el Nombre de la Clase");
             } else if (opcion == 5) {
 
                 Date Fecha_Seteada = null;
