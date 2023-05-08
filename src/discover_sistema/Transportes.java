@@ -57,5 +57,10 @@ public class Transportes {
     public void setEstacion(String Estacion){
     this.Estacion = Estacion;
     }
+
+    @Override
+    public String toString() {
+        return "Transportes{" + "Placa=" + Placa + ", Color=" + Color + ", Transportista=" + Transportista + ", Estacion=" + Estacion + '}';
+    }
     
 }
